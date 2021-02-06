@@ -14,8 +14,8 @@ class Artifact:
 	"""
 	def __init__(self, artifact: Path):
 		self.path = artifact
-		self.filename = self.path.name[:-4]
-		filename_split = self.filename.split("-")
+		self.filename = self.path.name
+		filename_split = self.filename[:-4].split("-")
 		if len(filename_split) == 6:
 			filename_split.append(DEFAULT_VARIANT)
 
