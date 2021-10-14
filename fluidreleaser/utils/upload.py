@@ -43,8 +43,9 @@ class Uploader:
 
 		self.sftp_chdir(PurePosixPath(artifact.device_codename) / artifact.android_version / artifact.variant)
 
-		self.sftp.put(artifact.path, self.current_file_base, callback=self._print_progress)
-		print("\n")
+		print("Uploading, please wait...")
+		self.sftp.put(artifact.path, self.current_file_base)
+		print("Done")
 
 		# Return to root dir
 		self.sftp.chdir(str(SFTP_MAIN_DIR))
@@ -65,11 +66,6 @@ class Uploader:
 			self.sftp.mkdir(basename)
 			self.sftp.chdir(basename)
 			return True
-
-	def _print_progress(self, transferred, toBeTransferred):
-		percentage = format(transferred * 100 / toBeTransferred, '.2f')
-		print(f"\r{self.current_file_base}: Transferred: {transferred} out of: {toBeTransferred} "
-			  f"({percentage}%)", end="")
 
 	def close(self):
 		self.sftp.close()
