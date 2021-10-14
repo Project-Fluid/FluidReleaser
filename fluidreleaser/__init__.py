@@ -16,7 +16,8 @@ OFFICIAL_DEVICES_REPO = "https://github.com/Project-Fluid-Devices/official_devic
 
 ANDROID_VERSIONS = {
 	"Quenol": "ten",
-	"Rum": "eleven"
+	"Rum": "eleven",
+	"Soda": "twelve",
 }
 
 NO_GAPPS = "gappless"
