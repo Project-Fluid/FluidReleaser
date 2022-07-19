@@ -18,6 +18,7 @@ ANDROID_VERSIONS = {
 	"Quenol": "ten",
 	"Rum": "eleven",
 	"Soda": "twelve",
+	"Soho": "twelve",
 }
 
 NO_GAPPS = "gappless"
