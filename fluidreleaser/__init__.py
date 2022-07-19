@@ -36,4 +36,4 @@ home_path = Path.home()
 
 # SSH key
 ssh_path = home_path / ".ssh"
-private_key_path = ssh_path / "id_rsa"
+private_key_path = ssh_path / "id_ed25519"

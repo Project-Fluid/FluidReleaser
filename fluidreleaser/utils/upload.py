@@ -22,7 +22,7 @@ class Uploader:
 		self.transport = paramiko.Transport(self.server)
 		try:
 			self.transport.connect(username=self.username,
-								   pkey=paramiko.RSAKey.from_private_key_file(private_key_path))
+								   pkey=paramiko.Ed25519Key.from_private_key_file(private_key_path))
 		except paramiko.ssh_exception.AuthenticationException as e:
 			print("Please add your public SSH key to https://sourceforge.net/auth/shell_services")
 			raise e
