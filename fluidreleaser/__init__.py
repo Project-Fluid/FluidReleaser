@@ -12,7 +12,7 @@ SFTP_SERVER_PORT = 22
 SFTP_MAIN_DIR = PurePosixPath("/") / "home" / "frs" / "project" / "project-fluid"
 SF_BASE_URL = "https://sourceforge.net/projects/project-fluid/files"
 
-OFFICIAL_DEVICES_REPO = "https://github.com/Project-Fluid-Devices/official_devices"
+OFFICIAL_DEVICES_REPO = "git@github.com:Project-Fluid-Devices/official_devices.git"
 
 ANDROID_VERSIONS = {
 	"Quenol": "ten",
